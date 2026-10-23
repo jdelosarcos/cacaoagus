@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "streamlit": "1.66.1",
+  "checks": [
+    "Cold start executes no preprocessing, clustering or model imports.",
+    "All nine pages open without input; prerequisites stop safely without training.",
+    "Included survey uploads/preprocesses to 302 records; literal None values retained.",
+    "Statistics and clustering run only on explicit buttons; EDA renders one selected chart.",
+    "All seven five-fold model fits reproduce the original notebook CV and holdout metrics.",
+    "Requesting an already-trained configuration does not refit the model.",
+    "Three default record explanations reproduce the notebook examples and preserve errors.",
+    "Native dashboard filters RF errors to 25 records without refitting any model.",
+    "Results ZIP includes completed tables and validates without running missing modules.",
+    "New farmers keep unknown outcomes; dated-series forecasting returns three periods and rejects duplicate dates.",
+    "A changed dataset invalidates prior models/explanations instead of reusing stale session results.",
+    "Real Streamlit server starts and returns HTTP 200 from its health endpoint.",
+    "Original cluster result is preserved; sampled silhouette path handles a 1,100-row input."
+  ],
+  "timings_seconds": {
+    "initial_page_seconds": 0.2170153960000789,
+    "Majority baseline_seconds": 0.39030295300017315,
+    "Decision tree_seconds": 1.0203252420001263,
+    "Cluster + decision tree_seconds": 2.8935053860000153,
+    "Cluster-only decision tree_seconds": 2.4792873430001237,
+    "Logistic regression_seconds": 0.9393899920000877,
+    "Random forest_seconds": 9.039026873000239,
+    "Support vector machine_seconds": 0.7539546490002067
+  },
+  "limitations": [
+    "AppTest exercises the Streamlit runtime; full browser visual layout was not verified.",
+    "No real time-series forecasts are claimed for the survey; synthetic series used only for validation."
+  ]
+}
